@@ -1,0 +1,683 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background:#ffffff;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin: auto;
+        width: 55%;
+        padding: 5px;
+        margin-top: 15px;
+        box-shadow: -1px -1px 8px 2px rgba(128, 128, 128, 0.15);
+        border: 0.1px solid rgba(128, 128, 128, 0.17);
+    }
+    .jumbotron p{
+        
+        width:70%;
+        color:red;
+        margin:5px;
+        padding:5px;
+        font-size:14px; 
+    }
+    .registrarse {
+        color: red;
+        float: right;
+        margin-top: -33px;
+        margin-right: 35px;
+        border-radius: 15px;
+        border: 1px solid rgba(128, 128, 128, 0.40);
+        padding: 2px 7px 2px 7px;
+        background: #ffffff;
+    }
+    
+        
+    .body-content {
+        padding: 0;
+    }
+}
+
+.navbar-brand { /***************logo****************/
+
+    padding-left: 35px;
+    padding-right:35px;
+    padding-bottom:5px;
+    border-radius: 2px;
+    background: #f1ecec;
+    font-size:36px;
+    margin-top:1px;
+    
+}
+.navbar-nav { /*menu*/
+    margin-left:40px;
+    margin-top:15px;
+   box-sizing:border-box;
+}
+.navbar-com {
+    
+    z-index:auto;
+    
+}
+    .navbar-com ul {
+        margin-top: -40px;
+        
+        margin-left:57%;
+        list-style: none;
+        display: flex;
+        box-sizing: border-box;
+        
+    }
+    .navbar-com li a {
+            color: green;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 22px;
+            
+    }
+    .navbar-com li a:hover{
+        color:#f1ecec;
+    }
+.table {
+    margin:auto;
+    width: 55%;
+    padding:10px;
+    margin-top: 20px;
+}
+    .table tr td {
+        width: 50%;
+        margin-left: 10px;
+        padding: 2px;
+    }
+
+.tableimage {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 20px;
+    
+    border: 1px solid rgba(128, 128, 128, 0.20);
+}
+    .tableimage:hover {
+        box-shadow: -1px -1px 8px 2px rgba(128, 128, 128, 0.15);
+    }
+    .table div {
+        width: 90%;
+        margin: auto;
+        border-radius: 3px;
+    }
+ .table tr td p {
+        margin-top:1px;
+        width:20%;
+        margin:auto;
+        float:left;
+        color:red;
+        font-size:10px;
+        padding:2px 5px 2px 5px;
+        border:1px solid rgba(128, 128, 128, 0.40);      
+ }
+ .table p {
+     background:rgb(128, 128, 128);
+     border-radius:3px;   
+ }
+   .table p button:hover {
+       color:#ffffff;
+       background:rgba(128, 128, 128, 0.21);
+   }
+.volver {
+    margin-left: 83%;
+    padding: 2px 7px 2px 7px;
+    background: #ffffff;
+    color: red;
+    border: 1px solid rgba(128, 128, 128, 0.40);
+    border-radius: 15px;
+}
+    
+        .slider {
+            width: 50%;
+            height: 340px;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 30px;
+            border-radius: 7px;
+            border: 1px solid #f1ecec;
+            margin-bottom: 2px;
+        }
+.slider ul {
+    display:flex;
+    padding:0;
+    width: 400%;
+    animation: cambio 20s infinite;
+}
+.slider li {
+    width: 100%;
+    list-style:none;
+}
+    .slider img {
+        width: 100%;
+        height: 335px;
+        border-radius:7px;
+    }
+@keyframes cambio { /*tiempo de imagenes slider*/
+
+      
+    0% {margin-left:0;}
+    20%{margin-left:0;}
+    
+    25% {margin-left:-100%;}
+    45% {margin-left:-100%;}
+
+    50% {margin-left:-200%;}
+    70% {margin-left:-200%;}
+
+    75% {margin-left:-300%;}
+    100% {margin-left:-300%;}
+
+
+}
+/*-------------------buscador---------------------*/
+         /*--------------contenedor icon---------------------*/
+#ctn-icon-search {
+    position:absolute;
+    left:72%;
+    top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+}
+    #ctn-icon-search i {
+        font-size: 30px;
+        color: #ffffff;
+        cursor: pointer;
+        transition:all 300ms;
+    }
+    #ctn-icon-search i:hover {
+        color:black;
+        
+    }
+/*----------------------contenedor de barra de busqueda-----------*/
+#ctn-bars-search {
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    top:25px;
+    background:#ffffff;
+    z-index: 300;    
+}
+#ctn-bars-search:hover {
+    top:55px;
+}
+    #ctn-bars-search input {
+        display: block;
+        width: 55%;
+        margin: auto;
+        padding: 5px;
+        font-size: 16px;
+    }
+/*----------------------caja de resultados----------------*/
+    #box-search {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 85px;
+        width: 55%;
+        background: #ffffff;
+        z-index: 8;
+        border: 1px solid rgba(128, 128, 128, 0.40);
+        overflow: hidden;
+        display:none;
+    }
+#box-search li a {
+    display:block;
+    
+    color:red;
+    margin-left:5px;
+    padding:5px 5px;
+    margin:1px;
+    text-decoration:none;
+}
+#box-search li a i {
+    margin-right:5px;
+}
+    #box-search li a:hover {
+        width:100%;
+        background: rgba(128, 128, 128, 0.40);
+        color: #ffffff;
+    }
+/*----------------iniciar sesion---------------*/
+.iniciar {
+    background: rgb(255, 255, 255);
+    margin-top: -40px;
+    padding: 2px 7px 2px 7px;
+    color: red;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.40);
+    margin-left: 90%;
+    float: left;
+    text-decoration: none;
+}
+.iniciar ul li {
+    text-decoration:none;
+}
+.footer{
+    width:100%;
+    padding:5px;
+    height:200px;
+    background:rgba(128, 128, 128, 0.17);
+}
+.footer h4 {
+    width: 292px;
+    color:rgb(0, 0, 0);
+    padding: 5px;
+    padding-right:10px;
+}
+    .footer tr td a{
+        color:rgba(128, 128, 128, 0.50);
+        padding:2px;
+    }
+.footer a {
+    margin-left:15px;
+    display:block;
+}
+.foot p {
+    text-align:center;
+}
+.sociales {
+    float: right;
+    margin-top: -190px;
+    margin-right:40px;
+    margin-bottom:5px;
+}
+    .sociales a {
+        font-size: 25px;
+        color: red;
+        text-decoration: none;
+    }
+.sociales a:hover {
+    color:#ffffff;
+    background:rgba(241, 236, 236, 0.19);
+}
+/*--------------------Quienes somos-------------------*/
+.historia {
+    width:100%;
+    padding:10px;
+}
+    .historia tr td {
+        width: 45%;
+        padding:20px;
+    }
+
+.historia tr td h3{
+    text-align:center;
+    color:red;
+}
+.historia p {
+    margin-left:10px;
+}
+.historia img {
+    width:500px;
+    margin-left:15px;
+    border:1px solid rgba(128, 128, 128, 0.40);
+
+}
+/*---------------------contactanos--------------*/
+
+.contactanos {
+    width:100%;
+    padding:20px;
+    
+}
+.contactanos tr td {
+    width:50%;
+    padding:20px;
+    padding-left:80px;
+    
+}
+.contacto p {
+    margin-left: 90px;
+    Color: rgba(128, 128, 128, 0.40);
+}
+.enviar {
+    margin-top:15px;
+    Color:red;
+    background:#ffffff;
+    padding:2px 7px 2px 7px;
+    border: 1px solid rgba(128, 128, 128, 0.40);
+    border-radius:15px;
+    margin-left:150px;
+}
+.elegir {
+    border: 1px solid #ffffff;
+    margin-bottom: 10px;
+    margin: auto;
+    Color: rgba(128, 128, 128, 0.40);
+    border: 0.1px solid rgba(128, 128, 128, 0.20);
+    background: rgba(241, 236, 236, 0.81);
+}
+.cajatexto {
+    width:220px;
+    height:120px;
+    margin-left:75px;
+    border:0.1px solid rgba(128, 128, 128, 0.20);
+    background: rgba(241, 236, 236, 0.81);
+
+}
+.mensaje {
+    margin-left: 75px;
+    Color: rgba(128, 128, 128, 0.40);
+}
+
+.tableproducto {
+    width:90%;
+    margin:auto;
+    padding:2px;
+    margin-right:30px;
+    
+}
+.producto image {
+    border: 1px solid rgba(128, 128, 128, 0.40);
+    padding:10px;
+}
+.btn_producto {
+    background:rgba(128, 128, 128, 0.40);
+    color:red;
+    padding:5px;
+    margin-left:200px;
+    border:2px solid rgba(128, 128, 128, 0.17);
+    border-radius:15px;
+}
+/*--------------------SERVIDORES------------*/
+.Servidores_HP,
+.Servidores_DELL,
+.Servidores_ACER,
+.Servidores_COMPAQ,
+.Servidores_LENOVO,
+/*-------------------IMPRESORAS-------------*/
+.Impresoras_EPSON,
+.Impresoras_DELL,
+.Impresoras_CANON,
+.Impresoras_HP,
+.Impresoras_BROTHER,
+/*------------------CELULARES-----------------*/
+.Celulares_SAMSUNG,
+.Celulares_APPLE,
+.Celulares_HUAWEI,
+.Celulares_LG,
+.Celulares_NOKIA,
+/*----------------AIRES------------------*/
+.Aires_SAMSUNG,
+.Aires_LG,
+.Aires_TOSHIBA,
+.Aires_HITACHI,
+.Aires_PANASONIC {
+    width: 50%;
+    margin: auto;
+   
+}
+/*---------------SERVIDORES TR TD-------------*/
+    .Servidores_HP tr td,
+    .Servidores_DELL tr td,
+    .Servidores_ACER tr td,
+    .Servidores_COMPAQ tr td,
+    .Servidores_LENOVO tr td,
+    /*-------------IMPRESORAS TR TD----------------*/
+    .Impresoras_EPSON tr td,
+    .Impresoras_DELL tr td,
+    .Impresoras_CANON tr td,
+    .Impresoras_HP tr td,
+    .Impresoras_BROTHER tr td,
+    /*-------------CELULARES TR TD-------------*/
+    .Celulares_SAMSUNG tr td,
+    .Celulares_APPLE tr td,
+    .Celulares_HUAWEI tr td,
+    .Celulares_LG tr td,
+    .Celulares_NOKIA tr td,
+    /*--------------AIRES TR TD----------------*/
+    .Aires_SAMSUNG tr td,
+    .Aires_LG tr td,
+    .Aires_TOSHIBA tr td,
+    .Aires_HITACHI tr td,
+    .Aires_PANASONIC tr td {
+        width: 50%;
+        margin-left: 10%;
+        padding: 30px;
+    }
+/*----------------IMPRESORAS TR TD IMG-------------*/
+        .Servidores_HP tr td img,
+        .Servidores_DELL tr td img,
+        .Servidores_ACER tr td img,
+        .Servidores_COMPAQ tr td img,
+        .Servidores_LENOVO tr td img,
+        /*-------------IMPRSORAS TR TD IMG-------------*/
+        .Impresoras_EPSON tr td img,
+        .Impresoras_DELL tr td img,
+        .Impresoras_CANON tr td img,
+        .Impresoras_HP tr td img,
+        .Impresoras_BROTHER tr td img,
+        /*---------------CELULARES TR TD IMG------------*/
+        .Celulares_SAMSUNG tr td img,
+        .Celulares_APPLE tr td img,
+        .Celulares_HUAWEI tr td img,
+        .Celulares_LG tr td img,
+        .Celulares_NOKIA tr td img,
+        /*--------------AIRES TR TD IMG------------------*/
+        .Aires_SAMSUNG tr td img,
+        .Aires_LG tr td img,
+        .Aires_TOSHIBA tr td img,
+        .Aires_HITACHI tr td img,
+        .Aires_PANASONIC tr td img {
+            width: 100%;
+            height: 230px;
+            border-radius: 6px;
+            box-shadow:-1px -1px  8px 2px rgba(128, 128, 128, 0.15);
+            border: 1px solid rgba(128, 128, 128, 0.17);
+        }
+
+/*--------------------caracteristicas de los equipos-----------------*/
+.Servidores_HP div,
+.Servidores_DELL div,
+.Servidores_ACER div,
+.Servidores_COMPAQ div,
+.Servidores_LENOVO div,
+/*---------------------caracteristicas de impresoras--------------*/
+.Impresoras_EPSON div,
+.Impresoras_DELL div,
+.Impresoras_CANON div,
+.Impresoras_HP div,
+.Impresoras_BROTHER div,
+/*------------------caracteristicas de celilares---------------*/
+.Celulares_SAMSUNG div,
+.Celulares_APPLE div,
+.Celulares_HUAWEI div,
+.Celulares_LG div,
+.Celulares_NOKIA div,
+/*------------------caracteristicas de los aires----------------*/
+.Aires_SAMSUNG div,
+.Aires_LG div,
+.Aires_TOSHIBA div,
+.Aires_HITACHI div,
+.Aires_PANASONIC div {
+    width: 100%;
+    margin:auto;
+    padding:10px;
+    font-size:10px;
+    margin-top:5px;
+    background: rgba(255, 255, 255, 0.90);
+    color: red;
+}
+    /*--------------------caracteristicas equipos-----------------*/
+    .Servidores_HP div p,
+    .Servidores_DELL div p,
+    .Servidores_ACER div p,
+    .Servidores_COMPAQ div p,
+    .Servidores_LENOVO div p,
+    /*---------------------caracteristicas impresoras--------------*/
+    .Impresoras_EPSON div p,
+    .Impresoras_DELL div p,
+    .Impresoras_CANON div p,
+    .Impresoras_HP div p,
+    .Impresoras_BROTHER div p,
+    /*------------------caracteristicas celilares---------------*/
+    .Celulares_SAMSUNG div p,
+    .Celulares_APPLE div p,
+    .Celulares_HUAWEI div p,
+    .Celulares_LG div p,
+    .Celulares_NOKIA div p,
+    /*------------------caracteristicas aires----------------*/
+    .Aires_SAMSUNG div p,
+    .Aires_LG div p,
+    .Aires_TOSHIBA div p,
+    .Aires_HITACHI div p,
+    .Aires_PANASONIC div p {
+        margin:1px;
+    }
+    .Servidores_HP div p b,
+    .Servidores_DELL div p b,
+    .Servidores_ACER div p b,
+    .Servidores_COMPAQ div p b,
+    .Servidores_LENOVO div p b,
+    /*-------------------------------*/
+    .Impresoras_EPSON div p b,
+    .Impresoras_DELL div p b,
+    .Impresoras_CANON div p b,
+    .Impresoras_HP div p b,
+    .Impresoras_BROTHER div p b,
+    /*--------------------------------*/
+    .Celulares_SAMSUNG div p b,
+    .Celulares_APPLE div p b,
+    .Celulares_HUAWEI div p b,
+    .Celulares_LG div p b,
+    .Celulares_NOKIA div p b,
+    /*--------------------------------*/
+    .Aires_SAMSUNG div p b,
+    .Aires_LG div p b,
+    .Aires_TOSHIBA div p b,
+    .Aires_HITACHI div p b,
+    .Aires_PANASONIC div p b {
+        color: black;
+        margin-left: 5px;
+ 
+    }
+.carro {
+    margin: auto;
+    background: white;
+    color: red;
+    padding: 2px 7px 2px 7px;
+    border-radius: 12px;
+}
+/*----------------inisiar-sesion--------------*/
+.iniciarsesion,
+.registrarme,
+.contacto {
+    margin: auto;
+    margin-top: 15px;
+    width: 400px;
+    height: 280px;
+    display: block;
+    padding: 45px 5px 45px 5px;
+    border: 1px solid rgba(128, 128, 128, 0.17);
+    border-radius: 15px;
+    box-shadow: -1px -1px 5px 2px rgba(128, 128, 128, 0.10);
+}
+.registrarme,
+.contacto {
+    height:450px;
+}
+.iniciarsesion h3, 
+.registrarme h3  {
+    margin-top:10px;
+    width:150px;
+    margin:auto;
+    color:rgba(128, 128, 128, 0.60);
+    margin-bottom:15px;  
+}
+input {
+    margin: auto;
+    display: block;
+    padding: 2px;
+    margin: auto;
+    border: none;
+    border: 0.1px solid rgba(128, 128, 128, 0.20);
+    background: rgba(241, 236, 236, 0.81);
+    color: rgba(128, 128, 128, 0.40);
+    margin-bottom: 10px;
+}
+.iniciarsesion b {
+    margin: auto;
+    font-size: 12px;
+    color: rgba(128, 128, 128, 0.40);
+    margin-left: 130px;
+}
+    .ingresar,
+    .guardar {
+        margin-top:35px;
+        width:75px;
+        color:red;
+        margin-bottom:50px;
+        background:#ffffff;
+        padding:2px 10px 2px 10px;
+        border:1px solid rgba(128, 128, 128, 0.20);
+        border-radius:13px;  
+    }
+.iniciar:hover,
+.volver:hover,
+.enviar:hover,
+.carro:hover,
+.ingresar:hover,
+.guardar:hover,
+.registrarse:hover {
+     text-decoration:none;
+     color: rgba(128, 128, 128, 0.40);
+     box-shadow: -1px -1px 5px 2px rgba(128, 128, 128, 0.15);
+}
+.Olvide {
+    margin-left:500px;
+    color:rgba(128, 128, 128, 0.40);
+}
+.Olvide:hover {
+    color:red;
+}
+.contactomensaje {
+    margin-left:430px;
+    margin-top:100px;
+
+}
+.admin {
+    margin-left: 200px;
+    height:200px;
+}
+.admin a {
+    padding: 5px;
+    color: red;
+    text-decoration: none;
+    background: rgba(128, 128, 128, 0.40);
+    border-radius: 3px;
+    border: 1px solid rgba(128, 128, 128, 0.20);
+}
+    .admin a:hover {
+        color: rgba(128, 128, 128, 0.40);
+        border: 1px solid rgba(241, 236, 236, 0.19);
+    }

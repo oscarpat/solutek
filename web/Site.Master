@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="web.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+   <link rel="shortcut icon" href="/favicon.ico" />
+   <link href="https://file.myfontastic.com/NqQ8joeH5ovQBa6vkupsQ4/icons.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet" />
+    <link href="fonts.css" rel="stylesheet" />
+    <script src="Scripts/Script.js"></script>
+
+    <style type="text/css">
+        .auto-style1 {
+            position: relative;
+            float: right;
+            border-radius: 4px;
+            display: none;
+            border: 1px solid transparent;
+            margin-right: 15px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding: 9px 10px;
+            background-color: transparent;
+            background-image: none;
+        }
+        .auto-style2 {
+            left: 72%;
+            top: 10px;
+            width: 93px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="auto-style1" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Solutek</a>
+                </div>
+                <div class="navbar-collapse collapse"> <!-----------------menu------------->
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Inicio</a></li>
+                        <li><a runat="server" href="~/About">Quienes Somos</a></li>
+                        <li><a runat="server" href="~/Contact">Contactanos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="navbar-com">
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send?phone=573013253266text=hola!&nbsp;como&nbsp;podemos&nbsp;ayudarte&nbsp?" class="icono-icon-whatsapp"></a></li>
+                        <li><a href="#" class="icono-icon-carro"></a></li>
+                    </ul>
+                </div>
+                <!---------------------buscador----------------->
+                <div id="ctn-icon-search" class="auto-style2">
+                    <i class="icono-icon-busqueda" id="icon-search"></i>
+                </div>
+                <a class="iniciar" href="https://localhost:44333/Admin/IniciarSesion">Iniciar Sesion</a>
+            </div>
+        </div>
+        
+       
+        <!----------contenedor de busqueda---------->
+
+      <div id="ctn-bars-search" > 
+            <input type="text" id="inputsearch"  placeholder="¿Que deseas buscar?">
+
+        </div>
+       
+                <ul id="box-search">
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>inicio</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>quienes somos</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>contactanos</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>servidores</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>impresoras</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>celulares</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>aires</a></li>
+                    <li><a href="#"><i class="icono-icon-busqueda"></i>quienes somos</a></li>
+
+                </ul>   
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+
+            <footer> <!-----------------footer--------------------->
+                <table class="footer">
+                    <tr>
+                        <td>
+                            <h4>Paginas</h4>
+                            <a href="https://localhost:44333/">Inicio</a>
+                            <a href="https://localhost:44333/Contact">contactanos</a>
+                            <a href="https://localhost:44333/About">Quienes somos</a>
+                            <a href="#">Producto</a>
+                            <a href="#">Clientes</a>
+                            <a href="#">Carro de compras</a>
+                            <a href="#">whatsapp</a>
+                        </td>
+                        <td>
+                            <h4>Busqueda</h4>
+                            <a href="https://localhost:44333/Galeria_Servidores">Servidores</a>
+                            <a href="https://localhost:44333/Galeria_Impresoras">Impresoras</a>
+                            <a href="https://localhost:44333/Galeria_Moviles">Celulares</a>
+                            <a href="https://localhost:44333/Galeria_Aires">Aires acondicionados</a>
+                            <a href="#">Registrarse</a>
+                            
+                        </td>
+                        <td>
+                            <h4>quienes somos</h4>
+                            <a href="#">TipoDocumento</a>
+                            <a href="https://localhost:44333/Admin/Administrador">Admin</a>
+                            <a href="#">mision</a>
+                            <a href="#">vision  </a>
+                            <p">&copy; <%: DateTime.Now.Year %> - solutek-colombia-2021</p>
+                        </td>
+                        <td>
+                            <h4>Direccion</h4>
+                            <p>Bogota-colombia. cr.16a nº 79-05 oficina
+                                602 Edificio office class PBX: (57)13164444
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="sociales"> <!------------------redes sociales------------->
+                    
+                        <a href="https://www.facebook.com/" class="icono-icon-facebook"></a>
+                        <a href="https://twitter.com/login" class="icono-icono-twitter"></a>
+                        <a href="https://www.linkedin.com/feed/" class="icono-icon-linkedin"></a>
+                        <a href="https://www.pinterest.com" class="icono-icon-pinterest"></a>
+                        <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" class="icono-icon-correo"></a>
+                    
+                </div>
+
+
+            </footer>
+
+        </div>              
+
+    </form>
+
+</body>
+</html>

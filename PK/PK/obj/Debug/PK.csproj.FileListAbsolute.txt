@@ -1,0 +1,2 @@
+C:\Users\Usuario\OneDrive\Documentos\solutek\PK\PK\obj\Debug\PK.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\solutek\PK\PK\obj\Debug\PK.csproj.CoreCompileInputs.cache
